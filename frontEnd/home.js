@@ -9,4 +9,5 @@ logOut.addEventListener("click", () => {
 })
 validateNewWord.addEventListener("click", () => {
 	favoriteWord.textContent = newWord.value;
+	newWord.value = "";
 })
