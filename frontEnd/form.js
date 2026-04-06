@@ -8,9 +8,10 @@ btnValidate.addEventListener("click", (event) => {
         .then(res => res.json())
         .then(data => {
             if (data.user) {
+				localStorage.setItem("user", JSON.stringify(data.user));
                 window.location = "./home.html";
             } else {
-                alert("Utilisateur introuvable");
+                alert("User not found");
             }
         });
 });
